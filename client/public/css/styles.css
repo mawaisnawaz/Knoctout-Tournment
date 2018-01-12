@@ -1,0 +1,215 @@
+body {
+    font-family: 'arial';
+    font-size: 16px;
+    color: #585858;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f7f7;
+    margin: 0px;
+    height: 100vh
+}
+
+section.form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.form-group{
+    width: 300px;
+    margin-bottom: 15px;
+}
+
+.form-group label{
+    display: block;
+    color : #656565;
+    margin-bottom: 5px;
+}
+
+.form-group input[type=text] {
+    display: inline-block;
+    font-size: 16px;
+    color: #656565;
+    border: 1px solid #d4d4d4;
+    background-color: transparent;
+    margin-right: 0.6em;
+    width: 300px;
+    border-radius: 4px;
+    padding: 8px 10px;
+    box-sizing: border-box;
+}
+
+
+.form-group button {
+    display: inline-block;
+    color: #fff;
+    background-color: #656565;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.2em;
+    padding: 0.5em 1.5em;
+    transition: all 300ms ease;
+    width: 100%;
+}
+
+section.container {
+    width: 50%;
+    background-color: #fff;
+    border-radius: 1px;
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.4);
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.4);
+}
+
+section.tournmentUpdate{
+    padding: 15px;
+    background-color: #fafafa;
+    text-align: center;
+    margin-top: 40px;
+    width: 50%;
+    box-sizing: border-box;
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.4);
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.4);
+}
+
+section.tournmentUpdate h2{
+    font-weight: 500;
+    font-size: 19px;
+    margin-top: 0px;
+}
+
+.hidden {
+    display: none !important;
+    opacity: 0;
+    position: absolute;
+    left: -999999px;
+    transition: all 300ms ease;
+}
+
+
+/*==========================================================================================================================
+    tournment information
+==========================================================================================================================*/
+
+#tournmentInformation {
+    padding: 20px;
+    background-color: #fafafa;
+    text-align: center;
+}
+#tournmentInformation #winner {
+    color: #1079d4;
+    font-weight: bold;
+}
+#tournmentInformation #tournmentMapping {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+#tournmentInformation #tournmentMapping > li {
+    width: 20px;
+    height: 20px;
+    margin: 8px 8px 8px 0;
+    border: 2px solid #585858;
+    border-radius: 4px;
+    transition: all 500ms ease;
+}
+
+#tournmentInformation #tournmentMapping > li.currentMatch {
+    background-color: #99bb39;
+    border-color: #99bb39;
+}
+#tournmentInformation #tournmentMapping > li.matchFinish {
+    background-color: #12847F;
+    border-color: #12847F;
+}
+
+/*==========================================================================================================================
+    Preloader styling
+==========================================================================================================================*/
+
+#preloader {
+    position: fixed;
+    display: block;
+    left: 0;
+    top: 0;
+    z-index: 999999;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    background: rgba(0, 0, 0, 0.5)
+}
+
+.spinner {
+    position: fixed;
+    top: 48%;
+    left: 48%
+}
+
+#loaderValue{
+    position: fixed;
+    top: 55%;
+    left: 0%;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+.spinner>div {
+    width: 18px;
+    height: 18px;
+    background-color: #d6d6d6;
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    animation: sk-bouncedelay 1.4s infinite ease-in-out both
+}
+
+.spinner .bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s
+}
+
+.spinner .bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s
+}
+
+#preloader .spinner>div {
+    background-color: #fff !important
+}
+    
+@-webkit-keyframes sk-bouncedelay {
+    0%,
+    80%,
+    100% {
+        -webkit-transform: scale(0)
+    }
+    40% {
+        -webkit-transform: scale(1.0)
+    }
+}
+
+@keyframes sk-bouncedelay {
+    0%,
+    80%,
+    100% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    40% {
+        -webkit-transform: scale(1.0);
+        transform: scale(1.0);
+    }
+}
+
+
+
+
