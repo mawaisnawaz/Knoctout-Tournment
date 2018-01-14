@@ -179,5 +179,3 @@ $ curl http://localhost:8765/winner?tournamentId=0&teamScores=8&teamScores=9&mat
   score: 9
 }
 ```
-
-Canva Pty Ltd owns the copyright in this document and use without permission is prohibited.
